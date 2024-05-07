@@ -50,5 +50,5 @@ const userSchema= new Schema({
     timestamps:true,
 });
 
-const userModel=model('User',userSchema);
+const userModel=model('user',userSchema);
 export default userModel;

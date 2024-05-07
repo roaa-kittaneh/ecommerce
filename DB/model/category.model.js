@@ -2,8 +2,8 @@ import mongoose, { Schema, Types, model } from "mongoose";
 
 const categorySchema= new Schema({
     name:{
+        type:String,
         required:true,
-       type:String,
        unique:true,
     },
     image:{
@@ -27,5 +27,5 @@ const categorySchema= new Schema({
     timestamps:true,
 });
 
-const categoryModel=model('User',categorySchema);
+const categoryModel=model('category',categorySchema);
 export default categoryModel;
