@@ -4,7 +4,7 @@ import fileupload, { filetype } from "../../utilts/multer.js";
 import { auth } from "../../middleware/auth.js";
 const router=Router();
 
-router.post('/',auth(),fileupload(filetype.image).single('image'),controller.create);
+router.post('/',auth(['admin']),fileupload(filetype.image).single('image'),controller.create);
 router.get('/',controller.getALL);
 router.get('/active',controller.getactive);
 router.get('/:id', controller.getDetails);

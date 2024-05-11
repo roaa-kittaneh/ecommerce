@@ -4,8 +4,7 @@ const userSchema= new Schema({
     username:{
         required:true,
         type:String,
-        min:4,
-        max:20,
+        
     },
     email:{
         type:String,
@@ -45,6 +44,10 @@ const userSchema= new Schema({
         default:'user',
         enum:['user','admin'],
     },
+    sendCode:{
+        type:String,
+        default:null,
+    }
 
 },{
     timestamps:true,

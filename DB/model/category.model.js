@@ -4,7 +4,7 @@ const categorySchema= new Schema({
     name:{
         type:String,
         required:true,
-       unique:true,
+      
     },
     image:{
         type:Object,
@@ -19,8 +19,8 @@ const categorySchema= new Schema({
         default:'active',
         enum:['active','notactive'],
     },
-    createdby:{type:Types.ObjectId,ref:'User'},
-    updatedby:{type:Types.ObjectId,ref:'User'},
+    createdby:{type:Types.ObjectId,ref:'user'},
+    updatedby:{type:Types.ObjectId,ref:'user'},
     
 
 },{
